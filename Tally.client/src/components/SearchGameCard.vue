@@ -45,16 +45,10 @@ export default {
         householdId: route.params.id
       }
     })
-    onMounted(async() => {
-      try {
-        await gamesService.getGamesByHouseholdId(route.params.id)
-      } catch (error) {
-        Pop.toast(error, 'error')
-      }
-    })
     return {
       state,
       games: computed(() => AppState.games),
+      activeSearchGames: computed(() => AppState.activeSearchGames),
       async addGame() {
         try {
           await gamesService.addGame(state.newGame)

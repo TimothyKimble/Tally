@@ -18,7 +18,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form @submit.prevent="searchGame" class="d-flex align-items-start flex-row">
+          <form @submit.prevent="searchGame()" class="d-flex align-items-start flex-row">
             <div class="form-group w-75 mr-auto">
               <input type="text"
                      name="search"
